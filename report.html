@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <!-- กำหนดชุดอักขระเป็น UTF-8 -->
+    <meta charset="UTF-8">
+
+    <!-- รองรับการแสดงผลบนอุปกรณ์ทุกขนาด -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ชื่อหน้าเว็บไซต์ -->
+    <title>สรุปรายงาน | Product Management System</title>
+
+    <!-- เรียกใช้ไฟล์ CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= Header ================= -->
+<header class="header">
+    <h1>สรุปรายงานสินค้า</h1>
+    <p>แสดงข้อมูลสรุปภาพรวมของระบบสินค้า</p>
+</header>
+
+<!-- ================= Navigation Bar ================= -->
+<nav class="navbar">
+    <a href="index.html">หน้าแรก</a>
+
+    <!-- เมนูจัดการสินค้า -->
+    <div class="dropdown">
+        <button class="dropbtn">จัดการสินค้า ▾</button>
+        <div class="dropdown-content">
+            <a href="add-product.html">เพิ่มสินค้า</a>
+            <a href="products.html">แสดงสินค้า</a>
+            <a href="manage-product.html">แก้ไข / ลบสินค้า</a>
+            <a href="report.html">สรุปรายงาน</a>
+        </div>
+    </div>
+
+    <a href="gallery.html">แกลเลอรี</a>
+    <a href="contact.html">ติดต่อ</a>
+</nav>
+
+<!-- ================= Main Content ================= -->
+<main>
+
+    <!-- ===== Section: Report Summary ===== -->
+    <section class="report-section">
+        <h2>รายงานสรุป</h2>
+
+        <!-- การ์ดสรุปข้อมูล -->
+        <div class="report-cards">
+
+            <!-- จำนวนสินค้าทั้งหมด -->
+            <div class="report-card">
+                <h3>จำนวนสินค้าทั้งหมด</h3>
+                <p>3 รายการ</p>
+            </div>
+
+            <!-- ราคาสูงสุด -->
+            <div class="report-card">
+                <h3>ราคาสูงสุด</h3>
+                <p>฿2,000</p>
+            </div>
+
+            <!-- ราคารวมทั้งหมด -->
+            <div class="report-card">
+                <h3>ราคารวมทั้งหมด</h3>
+                <p>฿4,500</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== Section: Report Table ===== -->
+    <section class="report-table-section">
+        <h2>รายละเอียดสินค้า</h2>
+
+        <!-- ตารางแสดงรายละเอียดสินค้า -->
+        <table class="product-table">
+
+            <!-- คำอธิบายตาราง (เชิงรายงาน) -->
+            <caption>ตารางแสดงรายละเอียดสินค้าในระบบ</caption>
+
+            <thead>
+                <tr>
+                    <th>ชื่อสินค้า</th>
+                    <th>ราคา (บาท)</th>
+                    <th>หมวดหมู่</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- สินค้ารายการที่ 1 -->
+                <tr>
+                    <td>Full Collection</td>
+                    <td>1,000</td>
+                    <td>เสื้อผ้า</td>
+                </tr>
+
+                <!-- สินค้ารายการที่ 2 -->
+                <tr>
+                    <td>TRUTH OR DARE</td>
+                    <td>1,500</td>
+                    <td>เสื้อผ้า</td>
+                </tr>
+
+                <!-- สินค้ารายการที่ 3 -->
+                <tr>
+                    <td>Download</td>
+                    <td>2,000</td>
+                    <td>เสื้อผ้า</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="footer">
+    <p>© 2026 Product Management System</p>
+
+    <!-- เมนูย่อด้านล่าง -->
+    <p>
+        <a href="index.html">หน้าแรก</a> |
+        <a href="products.html">สินค้า</a> |
+        <a href="contact.html">ติดต่อ</a>
+    </p>
+</footer>
+
+</body>
+</html>

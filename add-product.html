@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <!-- กำหนดชุดอักขระเป็น UTF-8 -->
+    <meta charset="UTF-8">
+
+    <!-- รองรับการแสดงผลบนอุปกรณ์ทุกขนาด -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ชื่อหน้าเว็บไซต์ -->
+    <title>เพิ่มสินค้า | Product Management System</title>
+
+    <!-- เรียกใช้งานไฟล์ CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= Header ================= -->
+<header class="header">
+    <h1>เพิ่มสินค้า</h1>
+    <p>กรอกข้อมูลสินค้าเข้าสู่ระบบ</p>
+</header>
+
+<!-- ================= Navigation Bar ================= -->
+<nav class="navbar">
+    <a href="index.html">หน้าแรก</a>
+
+    <!-- เมนูจัดการสินค้า -->
+    <div class="dropdown">
+        <button class="dropbtn">จัดการสินค้า ▾</button>
+        <div class="dropdown-content">
+            <a href="add-product.html">เพิ่มสินค้า</a>
+            <a href="products.html">แสดงสินค้า</a>
+            <a href="manage-product.html">แก้ไข / ลบสินค้า</a>
+            <a href="report.html">สรุปรายงาน</a>
+        </div>
+    </div>
+
+    <a href="gallery.html">แกลเลอรี</a>
+    <a href="contact.html">ติดต่อ</a>
+</nav>
+
+<!-- ================= Main Content ================= -->
+<main>
+
+    <!-- ===== Section: Add Product Form ===== -->
+    <section class="form-section">
+        <h2>ฟอร์มเพิ่มสินค้า</h2>
+
+        <!-- ฟอร์มสำหรับเพิ่มข้อมูลสินค้า -->
+        <form class="product-form">
+
+            <!-- ชื่อสินค้า -->
+            <label for="productName">ชื่อสินค้า</label>
+            <input 
+                type="text" 
+                id="productName"
+                name="productName"
+                placeholder="กรอกชื่อสินค้า" 
+                required
+            >
+
+            <!-- ราคา -->
+            <label for="price">ราคา (บาท)</label>
+            <input 
+                type="number" 
+                id="price"
+                name="price"
+                placeholder="กรอกราคา" 
+                min="0"
+                required
+            >
+
+            <!-- หมวดหมู่สินค้า -->
+            <label for="category">หมวดหมู่</label>
+            <select id="category" name="category" required>
+                <option value="">-- เลือกหมวดหมู่ --</option>
+                <option value="เสื้อผ้า">เสื้อผ้า</option>
+                <option value="รองเท้า">รองเท้า</option>
+                <option value="อุปกรณ์เสริม">อุปกรณ์เสริม</option>
+            </select>
+
+            <!-- รายละเอียดสินค้า -->
+            <label for="description">รายละเอียดสินค้า</label>
+            <textarea 
+                id="description"
+                name="description"
+                placeholder="กรอกรายละเอียดสินค้า"
+                rows="4"
+            ></textarea>
+
+            <!-- รูปสินค้า -->
+            <label for="image">รูปสินค้า</label>
+            <input 
+                type="file" 
+                id="image"
+                name="image"
+                accept="image/*"
+            >
+
+        <!-- ปุ่มบันทึกและล้างข้อมูล -->
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">บันทึกสินค้า</button>
+            <button type="reset" class="btn-secondary">ล้างข้อมูล</button>
+        </div>
+        </form>
+    </section>
+
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="footer">
+    <p>© 2026 Product Management System</p>
+
+    <!-- เมนูย่อด้านล่าง -->
+    <p>
+        <a href="index.html">หน้าแรก</a> |
+        <a href="products.html">สินค้า</a> |
+        <a href="contact.html">ติดต่อ</a>
+    </p>
+</footer>
+
+</body>
+</html>

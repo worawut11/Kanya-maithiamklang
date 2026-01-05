@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <!-- กำหนดชุดอักขระเป็น UTF-8 -->
+    <meta charset="UTF-8">
+
+    <!-- รองรับการแสดงผลบนอุปกรณ์ทุกขนาด -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ชื่อหน้าเว็บไซต์ -->
+    <title>ติดต่อเรา | Product Management System</title>
+
+    <!-- เรียกใช้ไฟล์ CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= Header ================= -->
+<header class="header">
+    <h1>ติดต่อเรา</h1>
+    <p>Product Management System</p>
+</header>
+
+<!-- ================= Navigation Bar ================= -->
+<nav class="navbar">
+    <a href="index.html">หน้าแรก</a>
+    <a href="about.html">เกี่ยวกับระบบ</a>
+
+    <!-- เมนูจัดการสินค้า -->
+    <div class="dropdown">
+        <button class="dropbtn">จัดการสินค้า ▾</button>
+        <div class="dropdown-content">
+            <a href="add-product.html">เพิ่มสินค้า</a>
+            <a href="products.html">แสดงสินค้า</a>
+            <a href="manage-product.html">แก้ไข / ลบสินค้า</a>
+            <a href="report.html">สรุปรายงาน</a>
+        </div>
+    </div>
+
+    <a href="gallery.html">แกลเลอรี</a>
+    <a href="contact.html">ติดต่อ</a>
+</nav>
+
+<!-- ================= Main Content ================= -->
+<main class="contact">
+
+    <!-- ===== Section: Contact Information ===== -->
+    <section class="contact-info">
+        <h2>ข้อมูลการติดต่อ</h2>
+
+        <!-- ข้อมูลผู้พัฒนา -->
+        <p><strong>ชื่อผู้พัฒนา:</strong> นางสาว กัญญา หมายเทียมกลาง</p>
+        <p><strong>สาขาวิชา:</strong> เทคโนโลยีธุรกิจดิจิทัล</p>
+        <p><strong>อีเมล:</strong> kanya.maithiamklang@intrachai.ac.th</p>
+        <p><strong>โทรศัพท์:</strong> 098-765-4321</p>
+    </section>
+
+    <!-- ===== Section: Contact Form ===== -->
+    <section class="contact-form">
+        <h2>แบบฟอร์มติดต่อ</h2>
+
+        <!-- ฟอร์มสำหรับติดต่อผู้พัฒนา -->
+        <form>
+
+            <!-- ชื่อผู้ติดต่อ -->
+            <label for="fullname">ชื่อ - นามสกุล</label>
+            <input 
+                type="text" 
+                id="fullname"
+                name="fullname"
+                placeholder="กรอกชื่อของคุณ"
+                required
+            >
+
+            <!-- อีเมล -->
+            <label for="email">อีเมล</label>
+            <input 
+                type="email" 
+                id="email"
+                name="email"
+                placeholder="example@email.com"
+                required
+            >
+
+            <!-- ข้อความ -->
+            <label for="message">ข้อความ</label>
+            <textarea 
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="พิมพ์ข้อความที่ต้องการติดต่อ"
+                required
+            ></textarea>
+
+            <!-- ปุ่มส่งข้อความ -->
+            <button type="submit">ส่งข้อความ</button>
+
+        </form>
+    </section>
+
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="footer">
+    <p>© 2026 Product Management System</p>
+
+    <!-- เมนูย่อด้านล่าง -->
+    <p>
+        <a href="index.html">หน้าแรก</a> |
+        <a href="products.html">สินค้า</a> |
+        <a href="contact.html">ติดต่อ</a>
+    </p>
+</footer>
+
+</body>
+</html>

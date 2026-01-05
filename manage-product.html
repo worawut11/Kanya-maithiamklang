@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <!-- กำหนดชุดอักขระเป็น UTF-8 -->
+    <meta charset="UTF-8">
+
+    <!-- รองรับการแสดงผลบนอุปกรณ์ทุกขนาด -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ชื่อหน้าเว็บไซต์ -->
+    <title>แก้ไข / ลบสินค้า | Product Management System</title>
+
+    <!-- เรียกใช้ไฟล์ CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= Header ================= -->
+<header class="header">
+    <h1>จัดการสินค้า</h1>
+    <p>แก้ไข และลบข้อมูลสินค้าในระบบ</p>
+</header>
+
+<!-- ================= Navigation Bar ================= -->
+<nav class="navbar">
+    <a href="index.html">หน้าแรก</a>
+
+    <!-- เมนูจัดการสินค้า -->
+    <div class="dropdown">
+        <button class="dropbtn">จัดการสินค้า ▾</button>
+        <div class="dropdown-content">
+            <a href="add-product.html">เพิ่มสินค้า</a>
+            <a href="products.html">แสดงสินค้า</a>
+            <a href="manage-product.html">แก้ไข / ลบสินค้า</a>
+            <a href="report.html">สรุปรายงาน</a>
+        </div>
+    </div>
+
+    <a href="gallery.html">แกลเลอรี</a>
+    <a href="contact.html">ติดต่อ</a>
+</nav>
+
+<!-- ================= Main Content ================= -->
+<main>
+
+    <!-- ===== Section: Manage Product Table ===== -->
+    <section class="manage-section">
+        <h2>รายการสินค้า</h2>
+
+        <!-- ตารางแสดงข้อมูลสินค้า -->
+        <table class="product-table">
+
+            <!-- คำอธิบายตาราง (เชิงรายงาน) -->
+            <caption>ตารางแสดงรายการสินค้าในระบบ</caption>
+
+            <thead>
+                <tr>
+                    <th>รูปสินค้า</th>
+                    <th>ชื่อสินค้า</th>
+                    <th>ราคา (บาท)</th>
+                    <th>จัดการ</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- สินค้ารายการที่ 1 -->
+                <tr>
+                    <td>
+                        <img src="images/Full Collection.jpg" alt="สินค้า Full Collection">
+                    </td>
+                    <td>Full Collection</td>
+                    <td>1,000</td>
+                    <td>
+                        <a href="edit-product.html" class="edit-btn">แก้ไข</a>
+                        <button class="delete-btn" onclick="confirmDelete()">ลบ</button>
+                    </td>
+                </tr>
+
+                <!-- สินค้ารายการที่ 2 -->
+                <tr>
+                    <td>
+                        <img src="images/TRUTH OR DARE.jpg" alt="สินค้า TRUTH OR DARE">
+                    </td>
+                    <td>TRUTH OR DARE</td>
+                    <td>1,500</td>
+                    <td>
+                        <a href="edit-product.html" class="edit-btn">แก้ไข</a>
+                        <button class="delete-btn" onclick="confirmDelete()">ลบ</button>
+                    </td>
+                </tr>
+
+                <!-- สินค้ารายการที่ 3 -->
+                <tr>
+                    <td>
+                        <img src="images/download.jpg" alt="สินค้า Download">
+                    </td>
+                    <td>Download</td>
+                    <td>2,000</td>
+                    <td>
+                        <a href="edit-product.html" class="edit-btn">แก้ไข</a>
+                        <button class="delete-btn" onclick="confirmDelete()">ลบ</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="footer">
+    <p>© 2026 Product Management System</p>
+
+    <!-- เมนูย่อด้านล่าง -->
+    <p>
+        <a href="index.html">หน้าแรก</a> |
+        <a href="products.html">สินค้า</a> |
+        <a href="contact.html">ติดต่อ</a>
+    </p>
+</footer>
+<script>
+function confirmDelete() {
+    if (confirm("คุณต้องการลบสินค้านี้ใช่หรือไม่?")) {
+        alert("ลบสินค้าเรียบร้อยแล้ว (ตัวอย่าง)");
+    }
+}
+</script>
+
+</body>
+</html>

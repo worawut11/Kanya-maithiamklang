@@ -1,0 +1,628 @@
+/* ================================================= */
+/* 1. RESET & BASE */
+/* ================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* ================================================= */
+/* 2. HEADER */
+/* ================================================= */
+.header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ================================================= */
+/* 3. NAVBAR (เหลือชุดเดียว ไม่ซ้ำ) */
+/* ================================================= */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px 0;
+    background: #1f2d3d;
+    flex-wrap: wrap;
+}
+
+.navbar a,
+.dropbtn {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 6px 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar a:hover,
+.dropbtn:hover {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 180px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ================================================= */
+/* 4. MAIN LAYOUT */
+/* ================================================= */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ================================================= */
+/* 5. HERO */
+/* ================================================= */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.hero-text button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #3498db;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ================================================= */
+/* 6. PRODUCTS (ภาพไม่ตัด) */
+/* ================================================= */
+.products {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ⭐ รูปสินค้า: ไม่ตัด */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #f4f6f8;
+    border-radius: 5px;
+}
+
+.price {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #e67e22;
+}
+
+/* ================================================= */
+/* 7. FEATURES */
+/* ================================================= */
+.features {
+    background: #ecf0f1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    background: #fff;
+    padding: 20px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+/* ================================================= */
+/* 8. GALLERY (ภาพไม่ตัด) */
+/* ================================================= */
+.gallery {
+    padding: 40px 0;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.gallery-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: #f4f6f8;
+    border-radius: 12px 12px 0 0;
+}
+
+.gallery-card h3 {
+    padding: 10px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* ================================================= */
+/* 9. CONTACT */
+/* ================================================= */
+.contact {
+    padding: 40px 0;
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-info,
+.contact-form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ================================================= */
+/* 10. TABLE / MANAGE / REPORT */
+/* ================================================= */
+.product-table {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-table th {
+    background: #2c3e50;
+    color: #fff;
+}
+
+.product-table img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: #f4f6f8;
+}
+
+.edit-btn {
+    background: #2196F3;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+}
+
+.delete-btn {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+}
+
+/* ================================================= */
+/* 11. FOOTER */
+/* ================================================= */
+.footer {
+    background: #1f2d3d;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* ================================================= */
+/* 12. RESPONSIVE */
+/* ================================================= */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img,
+    .gallery-card img {
+        height: 160px;
+    }
+}
+
+/* ปุ่มเริ่มต้นใช้งาน */
+.btn-primary {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 28px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* ============================= */
+/* About Page */
+/* ============================= */
+
+.about {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* กล่องข้อความ */
+.about-box {
+    background: #ffffff;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border-left: 6px solid #3498db;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* หัวข้อในกล่อง */
+.about-box h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #2c3e50;
+}
+
+/* ข้อความ */
+.about-box p,
+.about-box li {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* รายการ */
+.about-box ul {
+    padding-left: 20px;
+}
+
+/* ============================= */
+/* Add Product Form */
+/* ============================= */
+
+/* กล่องฟอร์ม */
+.form-section {
+    max-width: 650px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* หัวข้อฟอร์ม */
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+/* ฟอร์ม */
+.product-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.product-form input,
+.product-form textarea,
+.product-form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* focus แล้วดูโปร */
+.product-form input:focus,
+.product-form textarea:focus,
+.product-form select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52,152,219,0.15);
+}
+
+/* ============================= */
+/* Button Area */
+/* ============================= */
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* ปุ่มหลัก */
+.btn-primary {
+    padding: 10px 26px;
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* ปุ่มรอง */
+.btn-secondary {
+    padding: 10px 22px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #dfe6e9;
+}
+
+/* ============================= */
+/* Report Page */
+/* ============================= */
+
+/* Section รวม */
+.report-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.report-section h2 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.report-desc {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* ============================= */
+/* Summary Cards */
+/* ============================= */
+
+.report-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.report-card {
+    background: #ffffff;
+    width: 220px;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    border-top: 4px solid #3498db;
+}
+
+.report-card h3 {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.report-card p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+/* ============================= */
+/* Report Table Section */
+/* ============================= */
+
+.report-table-section {
+    max-width: 1100px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.report-table-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* ตารางสินค้า */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+/* caption แบบรายงาน */
+.product-table caption {
+    caption-side: bottom;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* หัวตาราง */
+.product-table thead {
+    background: #2c3e50;
+    color: #ffffff;
+}
+
+.product-table th,
+.product-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* แถวสลับสี */
+.product-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.product-table tbody tr:hover {
+    background: #eef6ff;
+}
+/* รูปสินค้า */    
+
+.edit-btn {
+    background: #2196F3;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.delete-btn {
+    background: #f44336;
+    color: #fff;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

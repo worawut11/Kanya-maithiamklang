@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <!-- กำหนดชุดอักขระเป็น UTF-8 -->
+    <meta charset="UTF-8">
+
+    <!-- รองรับการแสดงผลบนอุปกรณ์ทุกขนาด -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ชื่อหน้าเว็บไซต์ -->
+    <title>แกลเลอรีสินค้า | Product Management System</title>
+
+    <!-- เรียกใช้ไฟล์ CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= Header ================= -->
+<header class="header">
+    <h1>แกลเลอรีสินค้า</h1>
+    <p>Product Management System</p>
+</header>
+
+<!-- ================= Navigation Bar ================= -->
+<nav class="navbar">
+    <a href="index.html">หน้าแรก</a>
+    <a href="about.html">เกี่ยวกับระบบ</a>
+
+    <!-- เมนูจัดการสินค้า -->
+    <div class="dropdown">
+        <button class="dropbtn">จัดการสินค้า ▾</button>
+        <div class="dropdown-content">
+            <a href="add-product.html">เพิ่มสินค้า</a>
+            <a href="products.html">แสดงสินค้า</a>
+            <a href="manage-product.html">แก้ไข / ลบสินค้า</a>
+            <a href="report.html">สรุปรายงาน</a>
+        </div>
+    </div>
+
+    <a href="gallery.html">แกลเลอรี</a>
+    <a href="contact.html">ติดต่อ</a>
+</nav>
+
+<!-- ================= Main Content ================= -->
+<main class="gallery">
+
+    <!-- ส่วนแนะนำแกลเลอรี -->
+    <section class="gallery-intro">
+        <h2>ตัวอย่างสินค้า</h2>
+        <p>
+            แสดงภาพตัวอย่างสินค้าเพื่อให้ผู้ใช้งานเห็นภาพจริง
+            และช่วยประกอบการตัดสินใจเลือกซื้อสินค้า
+        </p>
+    </section>
+
+    <!-- ส่วนแสดงภาพสินค้าแบบ Grid -->
+    <section class="gallery-grid">
+
+        <!-- สินค้ารายการที่ 1 -->
+        <div class="gallery-card">
+            <img src="images/download.jpg" alt="ตัวอย่างสินค้า A">
+            <h3>เสื้อผ้าลิมิเต็ด</h3>
+        </div>
+
+        <!-- สินค้ารายการที่ 2 -->
+        <div class="gallery-card">
+            <img src="images/Full Collection.jpg" alt="ตัวอย่างสินค้า B">
+            <h3>เสื้อผ้าแฟชั่นครบเซต</h3>
+        </div>
+
+        <!-- สินค้ารายการที่ 3 -->
+        <div class="gallery-card">
+            <img src="images/TRUTH OR DARE.jpg" alt="ตัวอย่างสินค้า C">
+            <h3>เสื้อแฟชั่นสตรีท</h3>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="footer">
+    <p>© 2026 Product Management System</p>
+
+    <!-- เมนูย่อด้านล่าง -->
+    <p>
+        <a href="index.html">หน้าแรก</a> |
+        <a href="products.html">สินค้า</a> |
+        <a href="contact.html">ติดต่อ</a>
+    </p>
+</footer>
+
+</body>
+</html>

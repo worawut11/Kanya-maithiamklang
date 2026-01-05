@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แก้ไขสินค้า | Product Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>แก้ไขสินค้า</h1>
+    <p>ปรับปรุงข้อมูลสินค้าในระบบ</p>
+</header>
+
+<nav class="navbar">
+    <a href="index.html">หน้าแรก</a>
+    <a href="manage-product.html">จัดการสินค้า</a>
+    <a href="contact.html">ติดต่อ</a>
+</nav>
+
+<main>
+
+    <section class="form-section">
+        <h2>ฟอร์มแก้ไขสินค้า</h2>
+
+        <form class="product-form">
+
+            <label>ชื่อสินค้า</label>
+            <input type="text" value="Full Collection">
+
+            <label>ราคา (บาท)</label>
+            <input type="number" value="1000">
+
+            <label>หมวดหมู่</label>
+            <select>
+                <option selected>เสื้อผ้า</option>
+                <option>รองเท้า</option>
+                <option>อุปกรณ์เสริม</option>
+            </select>
+
+            <label>รายละเอียดสินค้า</label>
+            <textarea rows="4">เสื้อผ้าแฟชั่นครบเซต</textarea>
+
+            <label>เปลี่ยนรูปสินค้า</label>
+            <input type="file" accept="image/*">
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">บันทึกการแก้ไข</button>
+                <a href="manage-product.html" class="btn-secondary">ยกเลิก</a>
+            </div>
+
+        </form>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 Product Management System</p>
+</footer>
+
+</body>
+</html>
